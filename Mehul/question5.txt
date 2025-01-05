@@ -1,0 +1,7 @@
+Question 5 : How to set multiple remote repositories for the same project? Explain the use case. you should have a working demo of it.
+
+Answer :- Multiple remote repositories help us to maintain  our codebase across different platforms.
+Also Keep a backup of your project in a secondary remote (e.g., GitHub and GitLab).
+
+
+Demo : 

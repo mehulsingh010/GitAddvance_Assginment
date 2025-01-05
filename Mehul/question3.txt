@@ -1,0 +1,3 @@
+Question 3. Under what conditions will Git consider a file that has been deleted as being renamed, and what criteria does Git use to determine that a new file is a renamed version of the deleted file?
+
+Answer :- 
