@@ -1,0 +1,51 @@
+Question 5 : How to set multiple remote repositories for the same project? Explain the use case. you should have a working demo of it.
+
+Answer :- Multiple remote repositories help us to maintain  our codebase across different platforms.
+Also Keep a backup of your project in a secondary remote (e.g., GitHub and GitLab).
+
+
+Demo : 
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (main)
+$ git remote add origin git@github.com:mehulsingh010/GitAddvance_Assginment.git
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (main)
+$ git push -u origin main
+
+Enumerating objects: 44, done.
+Counting objects: 100% (44/44), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (32/32), done.
+Writing objects: 100% (44/44), 3.88 KiB | 793.00 KiB/s, done.
+Total 44 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), done.
+To github.com:mehulsingh010/GitAddvance_Assginment.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (main)
+$ git remote add backup git@gitlab.com:practice3651001/git_advance_assginment.git
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (main)
+$ git push -u backup main
+
+info: please complete authentication in your browser...
+Enumerating objects: 44, done.
+Counting objects: 100% (44/44), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (32/32), done.
+Writing objects: 100% (44/44), 3.88 KiB | 992.00 KiB/s, done.
+Total 44 (delta 8), reused 0 (delta 0), pack-reused 0
+To https://gitlab.com/practice3651001/git_advance_assginment.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'backup/main'.
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (main)
+$ git remote -v
+
+backup  https://gitlab.com/practice3651001/git_advance_assginment.git (fetch)
+backup  https://gitlab.com/practice3651001/git_advance_assginment.git (push)
+origin  git@github.com:mehulsingh010/GitAddvance_Assginment.git (fetch)
+origin  git@github.com:mehulsingh010/GitAddvance_Assginment.git (push)
+

@@ -1,0 +1,189 @@
+
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ echo "This is reset soft command" >> reset.txt
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ git add reset.txt
+warning: in the working copy of 'reset.txt', LF will be replaced by CRLF the next time Git touches it
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ git commit -m "add reset.txt file"
+[MehulSingh fff07c5] add reset.txt file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 reset.txt
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ git status
+On branch MehulSingh
+Your branch is ahead of 'origin/MehulSingh' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ git log
+commit fff07c54f6a5d70529b5c9a289eb9f3d70023818 (HEAD -> MehulSingh)
+Author: mehulsingh010 <mehul.singh@joshsoftware.com>
+Date:   Tue Jan 7 00:28:30 2025 +0530
+
+    add reset.txt file
+
+commit 6a106767874cafc748e1d48e54c55759cfe5e9cf (origin/MehulSingh)
+Author: mehulsingh010 <mehul.singh@joshsoftware.com>
+Date:   Sun Jan 5 23:39:38 2025 +0530
+
+    rename of file
+
+commit 28a36c9fc52b4909a974ed2cf2af59b7fc60b947
+Author: mehulsingh010 <mehul.singh@joshsoftware.com>
+Date:   Sun Jan 5 22:44:21 2025 +0530
+
+    add original file
+
+commit f3ebf670372491d540fa35cc7a1280f4560a1a0d
+Author: mehulsingh010 <mehul.singh@joshsoftware.com>
+Date:   Sun Jan 5 22:42:29 2025 +0530
+
+    delete original.txt
+
+commit cc42f3dfe9b50925d96cbd08d627e0f939572653
+Author: mehulsingh010 <mehul.singh@joshsoftware.com>
+Date:   Sun Jan 5 22:16:11 2025 +0530
+
+    Add original file
+
+commit 77647ddac0987a14be02c2f28513e6f0145060ef (backup/MehulSingh)
+Author: mehulsingh010 <mehul.singh@joshsoftware.com>
+Date:   Sun Jan 5 18:37:07 2025 +0530
+
+    add demo in question5.txt file
+
+commit adce1003161fec7ebc4a58d687fb4ddda30dd661
+Author: mehulsingh010 <mehul.singh@joshsoftware.com>
+Date:   Sun Jan 5 18:14:52 2025 +0530
+
+    add q1 q2 q3 q4 q5 q6
+
+commit 6ca5bb0907cc66d9da579bcad63e71a6c2444670
+Merge: e767616 9e7db8f
+Author: mehulsingh010 <mehul.singh@joshsoftware.com>
+Date:   Sun Jan 5 13:04:00 2025 +0530
+
+    Merge branch 'branch1'
+
+commit e767616bdbec2d2498c52c79ba045aaec818741e
+Author: mehulsingh010 <mehul.singh@joshsoftware.com>
+Date:   Sun Jan 5 13:03:46 2025 +0530
+
+    Delete conflict.txt in main branch
+
+commit 9e7db8fcdefe886c28d6075cd4877222726fc36c
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ git reset --soft HEAD~1
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ git status
+On branch MehulSingh
+Your branch is up to date with 'origin/MehulSingh'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   reset.txt
+
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ cat reset.txt
+This is reset soft command
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ git commit -m "add reset.txt file"
+[MehulSingh b55e133] add reset.txt file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 reset.txt
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ git status
+On branch MehulSingh
+Your branch is ahead of 'origin/MehulSingh' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ git reset --hard HEAD~1
+HEAD is now at 6a10676 rename of file
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ git log
+commit 6a106767874cafc748e1d48e54c55759cfe5e9cf (HEAD -> MehulSingh, origin/MehulSingh)
+Author: mehulsingh010 <mehul.singh@joshsoftware.com>
+Date:   Sun Jan 5 23:39:38 2025 +0530
+
+    rename of file
+
+commit 28a36c9fc52b4909a974ed2cf2af59b7fc60b947
+Author: mehulsingh010 <mehul.singh@joshsoftware.com>
+Date:   Sun Jan 5 22:44:21 2025 +0530
+
+    add original file
+
+commit f3ebf670372491d540fa35cc7a1280f4560a1a0d
+Author: mehulsingh010 <mehul.singh@joshsoftware.com>
+Date:   Sun Jan 5 22:42:29 2025 +0530
+
+    delete original.txt
+
+commit cc42f3dfe9b50925d96cbd08d627e0f939572653
+Author: mehulsingh010 <mehul.singh@joshsoftware.com>
+Date:   Sun Jan 5 22:16:11 2025 +0530
+
+    Add original file
+
+commit 77647ddac0987a14be02c2f28513e6f0145060ef (backup/MehulSingh)
+Author: mehulsingh010 <mehul.singh@joshsoftware.com>
+Date:   Sun Jan 5 18:37:07 2025 +0530
+
+    add demo in question5.txt file
+
+commit adce1003161fec7ebc4a58d687fb4ddda30dd661
+Author: mehulsingh010 <mehul.singh@joshsoftware.com>
+Date:   Sun Jan 5 18:14:52 2025 +0530
+
+    add q1 q2 q3 q4 q5 q6
+
+commit 6ca5bb0907cc66d9da579bcad63e71a6c2444670
+Merge: e767616 9e7db8f
+Author: mehulsingh010 <mehul.singh@joshsoftware.com>
+Date:   Sun Jan 5 13:04:00 2025 +0530
+
+    Merge branch 'branch1'
+
+commit e767616bdbec2d2498c52c79ba045aaec818741e
+Author: mehulsingh010 <mehul.singh@joshsoftware.com>
+Date:   Sun Jan 5 13:03:46 2025 +0530
+
+    Delete conflict.txt in main branch
+
+commit 9e7db8fcdefe886c28d6075cd4877222726fc36c
+Author: mehulsingh010 <mehul.singh@joshsoftware.com>
+Date:   Sun Jan 5 12:59:32 2025 +0530
+
+    update the confllict.txt
+
+commit a015aba4a50f1cf9731a1dc505973326b9393919
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ git status
+On branch MehulSingh
+Your branch is up to date with 'origin/MehulSingh'.
+
+nothing to commit, working tree clean
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ cat reset.txt
+cat: reset.txt: No such file or directory
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ touch reset_soft_hard.txt

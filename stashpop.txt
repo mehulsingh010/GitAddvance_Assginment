@@ -1,0 +1,41 @@
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ git stash
+Saved working directory and index state WIP on MehulSingh: 353e837 Add reset_doft_hard.txt file
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ git stash list
+stash@{0}: WIP on MehulSingh: 353e837 Add reset_doft_hard.txt file
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (main)
+$ git checkout MehulSingh
+Switched to branch 'MehulSingh'
+Your branch is ahead of 'origin/MehulSingh' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ cat change.txt
+cat: change.txt: No such file or directory
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal (MehulSingh)
+$ git stash pop
+On branch MehulSingh
+Your branch is ahead of 'origin/MehulSingh' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   change.txt
+
+Dropped refs/stash@{0} (4a14c23c520d6603a4b2a2ce23d98a83b3179bcb)

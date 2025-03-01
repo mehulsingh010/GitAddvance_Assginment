@@ -1,0 +1,26 @@
+Question 4 : Why is it not possible to create two branches with the names `fix` and `fix/bug` in a Git repository, and what causes this conflict?
+
+Answer : When we create a branch named `fix`, it is treated as a file under `.git/refs/heads/`.
+Creating a branch `fix/bug` would require `fix` to be a directory, causing a conflict.
+
+while Creating `fix`: `git branch fix` creates `.git/refs/heads/fix`.
+And While Creating `fix/bug`: Git expects `fix` to be a folder (`.git/refs/heads/fix/`).
+
+
+Demo : 
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal/one (main)
+$ git checkout -b fix
+Switched to a new branch 'fix'
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal/one (fix)
+$ git checkout -b fix/bug
+fatal: cannot lock ref 'refs/heads/fix/bug': 'refs/heads/fix' exists; cannot create 'refs/heads/fix/bug'
+
+Mehul@hppavilion MINGW64 /d/GitAdvance_Assg_Personal/one (fix)
+$ git branch
+  MehulSingh
+  branch1
+  branch2
+* fix
+  main
